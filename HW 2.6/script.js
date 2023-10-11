@@ -60,15 +60,17 @@ console.log(string.split('').reverse().join(''))
 
 let arr7 = [[1, 2, 3,],[4, 5, 6]];
 
-console.log(arr7.join(','))
+console.log(arr7.flat());
 
 //Задание 10
 
-let arr8 = [2 ,2 ,10];
+let arr8 = [2 ,2 ,10,51];
 let suminter = 0;
 for (let i = 0; i < arr8.length; i++) {
-    suminter = suminter + arr8[i];
+    if ( i != arr8.length-1) {
+    suminter = arr8[i] + arr8[i+1];
     console.log(suminter)
+    }
 }
 
 //Задание 11
@@ -83,17 +85,17 @@ console.log(arrSqr(arr9))
 
 //Задание 12
 
-newarrlenght = [];
+let newarrlenght = [];
 
 const nagetLengthWordsme = (arrenter) => {
     for (let i = 0; i < arrenter.length; i++) { 
         let newarrelement = arrenter[i].split('')
         newarrlenght.push(newarrelement.length)
     }
-    console.log(newarrlenght)
+    return newarrlenght;
 }
 
-nagetLengthWordsme(['слово', '', 'слог', 'длинное предложение', 'буква']);
+console.log(nagetLengthWordsme(['слово', '', 'слог', 'длинное предложение', 'буква']));
 
 // Задание 13
 
